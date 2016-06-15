@@ -49,8 +49,8 @@
       var ambientLight = new THREE.AmbientLight(0x222222, 10);
       scene.add(ambientLight);
 
-    //   var cube = sphereFactory.createCube();
-    //   scene.add( cube );
+      var cube = sphereFactory.createCube();
+      scene.add( cube );
       //Create the globe sphere from the sphere factory method
       var globe = sphereFactory.createSphere(200);
 
