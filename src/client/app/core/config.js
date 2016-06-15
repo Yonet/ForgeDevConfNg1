@@ -14,7 +14,7 @@
 
   var config = {
     appErrorPrefix: '[forgeDemo Error] ',
-    appTitle: 'forgeDemo'
+    appTitle: 'Forge DevConf Demo'
   };
 
   core.value('config', config);

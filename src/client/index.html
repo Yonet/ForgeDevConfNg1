@@ -5,7 +5,7 @@
   <style>
     /* This helps the ng-show/ng-hide animations start at the right place. */
     /* Since Angular has this but needs to load, this gives us the class early. */
-    
+
     .ng-hide {
       display: none!important;
     }
@@ -38,7 +38,7 @@
     <div id="splash-page" ng-show="showSplash">
       <div class="page-splash">
         <div class="page-splash-message">
-          forgeDemo
+          Welcome to Forge DevConf Demo
         </div>
         <div class="progress progress-striped active page-progress-bar">
           <div class="bar"></div>
@@ -66,6 +66,7 @@
   <!-- inject:js -->
   <script src="/src/client/app/app.module.js"></script>
   <script src="/src/client/app/admin/admin.module.js"></script>
+  <script src="/src/client/app/demo/demo.module.js"></script>
   <script src="/src/client/app/blocks/exception/exception.module.js"></script>
   <script src="/src/client/app/blocks/logger/logger.module.js"></script>
   <script src="/src/client/app/blocks/router/router.module.js"></script>
@@ -75,6 +76,8 @@
   <script src="/src/client/app/widgets/widgets.module.js"></script>
   <script src="/src/client/app/admin/admin.controller.js"></script>
   <script src="/src/client/app/admin/admin.route.js"></script>
+  <script src="/src/client/app/demo/demo.controller.js"></script>
+  <script src="/src/client/app/demo/demo.route.js"></script>
   <script src="/src/client/app/blocks/exception/exception-handler.provider.js"></script>
   <script src="/src/client/app/blocks/exception/exception.js"></script>
   <script src="/src/client/app/blocks/logger/logger.js"></script>
@@ -97,5 +100,4 @@
   <!-- endinject -->
   <!-- endbuild -->
 </body>
-
 </html>
