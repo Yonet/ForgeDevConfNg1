@@ -8,9 +8,8 @@
 
 ## Steps
 
-Add a width attribute to the isolate scope to add customization.
-Use the attribute to set the size of the canvas.
-Declare the width attribute on the globe html elements. 
+Refactor the code to have sphere creation in a factory.
+Use the factory in the directive. 
 
 ## License
 

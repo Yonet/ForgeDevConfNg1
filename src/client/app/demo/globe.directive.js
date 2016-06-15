@@ -5,8 +5,9 @@
     .module('app.demo')
     .directive('ayGlobe', ayGlobe);
 
+  ayGlobe.$inject = ['sphereFactory'];
   /* @ngInject */
-  function ayGlobe() {
+  function ayGlobe(sphereFactory) {
 
     // Directive definition object
     var directive = {
@@ -18,7 +19,8 @@
         height: '@height', // static value
         color: '&color' // expression
       }
-    };
+    }; ///definition
+
     return directive;
 
     function link(scope, element, attrs) {
@@ -39,20 +41,12 @@
       //Add the renderer to the DOM
       element[0].appendChild(renderer.domElement);
 
-
-      //Cube geometry
-      var geometry = new THREE.BoxGeometry(1, 1, 1);
-
-      //Basic material
-      var material = new THREE.MeshBasicMaterial({
-        color: 0x00ff00
-      });
-
-      //Mesh
-      var cube = new THREE.Mesh(geometry, material);
-
-
+      var cube = sphereFactory.createCube();
       scene.add(cube);
+      //   var cubeTwo = sphereFactory.createCube(0x00ffff);
+      //   scene.add(cubeTwo);
+      //   var globe = sphereFactory.createSphere(5);
+      //   scene.add(globe);
 
       camera.position.z = 5;
 
@@ -67,10 +61,9 @@
 
         //Actual rendering the scene with the camera
         renderer.render(scene, camera);
-      };
+      }; ///render
 
       render();
-
-    }
-  }
+    } ///link
+  } ///ayGlobe
 })();
