@@ -41,14 +41,25 @@
       //Add the renderer to the DOM
       element[0].appendChild(renderer.domElement);
 
-      var cube = sphereFactory.createCube();
-      scene.add(cube);
-      //   var cubeTwo = sphereFactory.createCube(0x00ffff);
-      //   scene.add(cubeTwo);
-      //   var globe = sphereFactory.createSphere(5);
-      //   scene.add(globe);
+      //   Add lights
+      var light = new THREE.DirectionalLight(0xffffff, 2);
+      light.position.set(.5, 0, 1);
+      scene.add(light);
 
-      camera.position.z = 5;
+      var ambientLight = new THREE.AmbientLight(0x222222, 10);
+      scene.add(ambientLight);
+
+    //   var cube = sphereFactory.createCube();
+    //   scene.add( cube );
+      //Create the globe sphere from the sphere factory method
+      var globe = sphereFactory.createSphere(200);
+
+      var cloud = sphereFactory.createCloud(205);
+      //
+      scene.add(globe);
+      scene.add(cloud);
+
+      camera.position.z = 550;
 
       var render = function() {
 

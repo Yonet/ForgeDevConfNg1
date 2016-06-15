@@ -8,8 +8,7 @@
 
 ## Steps
 
-Refactor the code to have sphere creation in a factory.
-Use the factory in the directive. 
+Add lights and texture.
 
 ## License
 
