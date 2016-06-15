@@ -42,8 +42,10 @@ switch (environment) {
     app.use('/app/*', function(req, res, next) {
       four0four.send404(req, res);
     });
+    app.use('/simpleCube', express.static('./src/client/simpleCube.html'));
     // Any deep link calls should return index.html
     app.use('/*', express.static('./src/client/index.html'));
+
     break;
 }
 

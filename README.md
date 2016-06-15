@@ -8,9 +8,15 @@
 
 ## Steps
 
-Follow the Admin module structure to add a new module called demo.
 
-Don't forget to include the newly created module to index.html file and app.module.js.
+`bower install three.js  --save` to install and include the three.js library.
+
+Create the basic globe directive for demo module.
+
+Add Scene, Camera, lights.
+Add geometry, material, mesh.
+Attach geometry, camera and the lights to the scene and render.
+
 
 ## License
 
