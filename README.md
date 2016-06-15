@@ -8,15 +8,9 @@
 
 ## Steps
 
-
-`bower install three.js  --save` to install and include the three.js library.
-
-Create the basic globe directive for demo module.
-
-Add Scene, Camera, lights.
-Add geometry, material, mesh.
-Attach geometry, camera and the lights to the scene and render.
-
+Add a width attribute to the isolate scope to add customization.
+Use the attribute to set the size of the canvas.
+Declare the width attribute on the globe html elements. 
 
 ## License
 
